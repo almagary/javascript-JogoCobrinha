@@ -2,6 +2,21 @@
 let canvas = document.getElementById("snake")
 let context = canvas.getContext("2d");
 let box = 32;
+let snake = [];
+snake[0] = {
+    x: 8 * box,
+    y: 8 * box
+
+}
+
+
+function criarCobrinha(){
+    for(i=0;i<snake.length;i++){
+        context.fillStyle = "red";
+        context.fillRect(snake[i].x, snake[i].y, box, box);
+    }
+
+}
 
 function criarBG(){
     context.fillStyle = "rgb(4, 170, 109)";
@@ -9,3 +24,4 @@ function criarBG(){
 }
 
 criarBG();
+criarCobrinha();
